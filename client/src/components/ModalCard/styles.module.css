@@ -56,11 +56,18 @@
 
 .image img{
   width: 250px;
-  padding: 10px 20px;
+  padding: 10px 0px;
+}
+.image{
+  text-align: justify;
+  font-size: 15px;
+  text-indent: 30px;
+  padding-right: 7px;
+  padding-top: 30px ;
+
 }
 .modalText{
   padding: 20px 0px;
-  padding-left: 7px;
   text-align: justify;
   font-size: 15px;
   text-indent: 30px;
@@ -71,5 +78,9 @@
 .imageText{
   text-align: center;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 22px;
+  width: 250px;
+}
+.imgText{
+  margin-right:20px ;
 }

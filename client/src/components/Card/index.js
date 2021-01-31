@@ -3,7 +3,7 @@ import { useForm, FormProvider } from "react-hook-form";
 import styles from './styles.module.css'
 import Input from '../shared/Input'
 import { useSelector, useDispatch } from "react-redux";
-import { createNewHero,uploadImg } from "../../store/thunks";
+import { createNewHero } from "../../store/thunks";
 import {useHistory} from 'react-router-dom'
 import Button from '../shared/Button'
 import Upload from '../shared/ImageContainer'
@@ -22,18 +22,19 @@ export default function AddHero() {
       reset,
       formState: { isSubmitSuccessful, isValid },
     } = methods;
-    const { img} = useSelector((state) => state.dashboardHero);
 
 
-    useEffect(()=>{
-        dispatch(uploadImg())
-    },[])
-   
     const handleClickForm = (data)=>{
       dispatch(createNewHero(data))
-      history.push('/')
+      console.log(data)
+      
 
     }
+    useEffect(()=>{
+      if(isSubmitSuccessful){
+        history.push('/')
+      }
+    },[isSubmitSuccessful, history])
     useEffect(()=>{
       if(isSubmitSuccessful){
         reset('firstName',' ');
@@ -52,7 +53,7 @@ export default function AddHero() {
                
                
                     <div className={styles.image}>    
-                 {/*  <Upload/>  */  }               
+                   {/* <Upload/>                  */}
                 </div>
                  <div className={styles.text}>
                   <Input

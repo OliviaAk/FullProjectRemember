@@ -73,12 +73,12 @@ export default function Home({}) {
                                     </div>
                         </div>
                         <div className={styles.createContent}>
-                            <p>СОЗДАЙТЕ ФОТО ОТКРЫТКУ ГЕРОЯ ОБОРОНЫ МОГИЛЕВА</p>
+                            <p>СОЗДАЙТЕ ОТКРЫТКУ ГЕРОЯ ОБОРОНЫ МОГИЛЕВА</p>
                         </div>
                         <div className={styles.createInfo}>
                             <div className={styles.createItem}>
                                 <IconSVG className={styles.createIcon} src={Start}/>
-                                <p>Загрузите фото и добавьте текст на открытку</p>
+                                <p>Добавьте текст на открытку</p>
                             </div>
                             <div className={styles.line}><IconSVG src={Arrow}/></div>
                             <div className={styles.createItem}>

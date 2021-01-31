@@ -7,7 +7,7 @@ const Upload = () => {
     const [profileImg, setProfileImg]= useState()
 
     const onFileChange =(e)=> {
-        setProfileImg({ profileImg: e.target.files[0] })
+        setProfileImg({ profileImg: e.target.files[0], loaded: 0, })
     }
 
     const onSubmit = (e)=> {
@@ -16,6 +16,7 @@ const Upload = () => {
         formData.append('profileImg',profileImg)
         axios.post("http://localhost:5000/img/", formData, {
         }).then(res => {
+            console.log(res)
         })
     }
   return (

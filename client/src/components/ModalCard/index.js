@@ -4,7 +4,7 @@ import ShareButtons from "../shared/Share/sharebuttons.component"
 import PropTypes from "prop-types";
 import Close from '../../assets/icons/close.svg'
 import IconSVG from '../shared/Icons';
-import Por1 from '../../assets/heroes/i1.jpeg'
+import Por1 from '../../assets/images/cardImg.png'
 import {LinksShares} from '../../mocks/shares'
 import {useHistory} from 'react-router-dom'
 import { useSelector, useDispatch } from "react-redux";
@@ -32,18 +32,20 @@ const { userCard } = useSelector((state) => state.dashboardHero);
         </div>
         <div className={styles.modalContent}>
           <div className={styles.modalText}>
-            {userCard.text}
+            <div className={styles.imageText}>
+            <p>{userCard.firstName}</p>
+            <p>{userCard.dateBirth}</p>
+
+            </div>
       
 
           </div>
        
         <div className={styles.image}>
             <IconSVG  src={Por1}/>
-            <div className={styles.imageText}>
-            <p>{userCard.firstName}</p>
-            <p>{userCard.dateBirth}</p>
+            <p className={styles.imgText}>{userCard.text}</p>
 
-            </div>
+           
           
          </div>  
          

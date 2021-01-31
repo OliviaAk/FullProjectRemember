@@ -64,6 +64,7 @@ console.log(userImg)
         </div>
         <div className={styles.static}>Открыток на сайте {users.length}</div>
        
+       
         </div>
     )
 }

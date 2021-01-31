@@ -30,10 +30,6 @@ export const createNewHero = createAsyncThunk('heroUser', async (hero)=>{
   return data
 })
 
-export const uploadImg = createAsyncThunk('photo',async()=>{
-  const {data}= await axios.get('http://localhost:5000/add/photo')
-  return data
-})
 
 export const userHero = createAsyncThunk('uh',async()=>{
   const {data}= await axios.get(`http://localhost:5000/auth/userHero`)

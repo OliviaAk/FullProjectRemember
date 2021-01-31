@@ -35,12 +35,10 @@ router.post('/', upload.single('profileImg'), (req, res, next) => {
     const url = req.protocol + '://' + req.get('host')
     const user = new Image({
         _id: new mongoose.Types.ObjectId(),
-        name: req.body.name,
         profileImg:req.file.filename
     });
     user.save().then(result => {
         res.status(201).json({
-            message: "User registered successfully!",
             userCreated: {
                 _id: result._id,
                 profileImg: result.profileImg

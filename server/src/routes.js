@@ -12,5 +12,4 @@ router.use("/history", history);
 router.use("/auth", auth);
 router.use("/add", add);
 router.use("/img", img);
-
 module.exports = router;
