@@ -1,0 +1,82 @@
+
+.dashboardContent{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 25px;
+
+}
+.dashboard{
+    background-image: url('../../../assets/images/home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    background-size: cover;
+}
+.dashboardContainer{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 10%;
+
+
+}
+.dashboardContent{
+    position: relative;
+    width:100%;
+    height: 100%;
+    align-self: center;
+    background-image: url('../../../assets/images/kirpichi.jpg');
+
+}
+.dashboardBg{
+    width:100%;
+    height: 100%;
+    background: rgba(219, 190, 126, 0.6); 
+    z-index: 1;
+    border-radius: 25px;
+    padding: 20px 0;
+
+}
+.dashboardContentHeader{
+    text-align: center;
+    margin: 20px 0 30px 0px;
+}
+.dashboardItem{
+    border: 2px solid #250606;
+    border-radius: 25px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #250606;
+    background-color: #DEB887;
+    width: 320px;
+    height: 500px;
+    margin: 20px 20px;
+    text-align: center;
+    font-size: 18px;
+
+}
+.dashboardItems{
+    margin: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.itemImage{
+}
+.itemMainInfo{
+    height: 100px;
+    font-weight: bold;
+
+
+}
+.itemInfo{
+    display:block;
+}
+.portrait{
+    width: 250px;
+    height: 300px;
+}
+.itemName{
+    list-style: none;
+    color: #250606;
+    text-decoration: none;
+}

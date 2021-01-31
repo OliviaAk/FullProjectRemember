@@ -1,0 +1,235 @@
+.btn{
+  display: inline-block;
+  padding: 0px 48px;
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 5px;
+  outline: none !important;
+  text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0 10px;
+}
+  .primary-btn1 {
+    background: #A52A2A;
+    color: #f2f2f2;
+    line-height: 48px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease 0s;
+    outline: none;
+  }
+  .primary-btn2{
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    border-radius: 25px;
+    border-color: #000;
+    font-size: 16px;
+    line-height: 19px;
+    box-sizing: border-box;
+    height: 50px;
+    padding: 0;
+    min-width: 100px;
+    background: transparent;
+    color: #000;
+    outline: none;
+  }
+  .primary-btn2:hover{
+    border: 1px solid #000;
+    background:transparent;
+    cursor: pointer;
+
+  }
+  .primary-back{
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    border-radius: 25px;
+    border-color: rgb(44, 106, 110);
+    font-size: 16px;
+    line-height: 19px;
+    font-style: normal;
+    box-sizing: border-box;
+    text-transform:none;
+    height: 45px;
+    padding: 0;
+    min-width: 180px;
+    background:rgb(138, 223, 229);
+    color: rgb(19, 7, 53);
+    outline: none;
+    align-self: center;
+justify-self: center;
+margin: 0 120px;
+
+  }
+  .primary-back:hover{
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    border-radius: 25px;
+    border-color: rgb(44, 106, 110);
+    font-size: 16px;
+    line-height: 19px;
+    font-style: normal;
+    box-sizing: border-box;
+    text-transform:none;
+    height: 45px;
+    padding: 0;
+    min-width: 180px;
+    background:rgb(80, 211, 235);
+    color: rgb(20, 68, 87);
+    outline: none;
+    align-self: center;
+
+justify-self: center;
+  }
+ 
+  .primary-btn3{
+
+    background: #8b4734;
+    color: #f2f2f2;
+    height: 50px;
+    width: 200px;
+    line-height: 48px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease 0s;
+    outline: none;
+
+  }
+  .primary-btn3:hover{
+    border: 1px solid #220505;
+    background:transparent;
+    cursor: pointer;
+    color: #250606;
+
+  }
+    .btn--modal{
+      height: 40px;
+      width: 180px;
+      cursor: pointer;
+      overflow: hidden;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      line-height: 19px;
+      box-sizing: border-box;
+      padding: 0;
+      min-width: 100px;
+      background: linear-gradient(135deg,#7fbe41,#71ab37);
+      color: #fff;
+      margin-top: 20px;
+      outline: none;
+    }
+    .btn-pub{
+      height: 40px;
+      width: 180px;
+      cursor: pointer;
+      overflow: hidden;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      line-height: 19px;
+      box-sizing: border-box;
+      padding: 0;
+      min-width: 100px;
+      background: linear-gradient(135deg,#7fbe41,#71ab37);
+      color: #fff;
+      outline: none;
+
+    }
+    .btn-pub:hover{
+      height: 40px;
+      width: 180px;
+      cursor: pointer;
+      overflow: hidden;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      line-height: 19px;
+      box-sizing: border-box;
+      padding: 0;
+      min-width: 100px;
+      background: transparent;
+      color: #7FBE41;
+      outline: none;
+
+    }
+  .btn--modal:hover{
+    height: 40px;
+    width: 180px;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 0;
+    min-width: 100px;
+    background: linear-gradient(135deg,#7fbe41,#71ab37);
+    color: #fff;
+    outline: none;
+
+  }
+  .btn--facebook {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    line-height: 19px;
+    box-sizing: border-box;
+    height: 50px;
+    padding: 0;
+    min-width: 50px;
+    background: linear-gradient(135deg,#5249ce,#1114bd);
+    color: #fff;
+    outline: none;
+    text-align: center;
+   }
+   .btn--facebook:hover{
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    border-radius: 35px;
+    font-size: 16px;
+    line-height: 19px;
+    box-sizing: border-box;
+    height: 50px;
+    padding: 0;
+    min-width: 50px;
+    background: transparent;
+    color:transparent;
+    outline: none;
+    text-align: center;
+   }
+   .btn-nav{
+    background: #d14b4b;
+    color: #f2f2f2;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all 0.3s ease 0s;
+    outline: none;
+    padding: 0;
+    height: 50px;
+    width: 100px;
+    justify-self: center;
+    align-self: center;
+   }
+   .btn-nav:hover{
+    background: #d14b4b;
+    color: #f2f2f2;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all 0.3s ease 0s;
+    outline: none;
+    padding: 0;
+    height: 50px;
+    width: 100px;
+    justify-self: center;
+    align-self: center;
+
+   }
