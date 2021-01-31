@@ -62,8 +62,38 @@
   
 }
 .heroTextOne{
-    margin: 0 120px;
+    margin: 0 80px;
 }
+
+
 .btnHero{
     
+}
+@media (max-width:763px){
+    .heroContainer{
+        max-width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-top: 5%;
+        padding-bottom: 10%;
+    }
+    .heroMain{
+        padding: 20px 0px;
+      
+    }
+    .heroTextOne{
+        margin: 0 40px;
+    }
+
+}
+@media (max-width:445px){
+    
+.heroHeader{
+    font-size: 16px;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 45px;
+}
 }

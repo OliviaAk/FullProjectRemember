@@ -80,3 +80,51 @@
     color: #250606;
     text-decoration: none;
 }
+
+@media (max-width:455px){
+    .dashboardItem{
+        border: 2px solid #250606;
+        border-radius: 25px;
+        padding: 0px;
+        margin-bottom: 10px;
+        color: #250606;
+        background-color: #DEB887;
+        width: 300px;
+        height: 500px;
+        margin: 10px 10px;
+        text-align: center;
+        font-size: 15px;
+
+    }
+    .portrait{
+        width: 200px;
+    height: 250px;
+    margin-top: 10px;
+    }
+
+}
+
+@media (max-width:369px){
+    .dashboardItem{
+        border: 2px solid #250606;
+        border-radius: 25px;
+        padding: 0px;
+        margin-bottom: 10px;
+        color: #250606;
+        background-color: #DEB887;
+        width: 280px;
+        height: 500px;
+        margin: 10px 10px;
+        text-align: center;
+        font-size: 15px;
+
+    }
+    .portrait{
+        width: 190px;
+    height: 250px;
+    margin-top: 10px;
+    }
+.itemInfo{
+    margin: 0 5px;
+}
+}   

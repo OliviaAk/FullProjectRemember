@@ -16,7 +16,6 @@ const Upload = () => {
         formData.append('profileImg',profileImg)
         axios.post("http://localhost:5000/img/", formData, {
         }).then(res => {
-            console.log(res)
         })
     }
   return (

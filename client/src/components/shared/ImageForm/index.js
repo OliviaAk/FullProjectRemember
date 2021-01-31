@@ -44,11 +44,9 @@ const FileUpload = () => {
       setMessage('File Uploaded');
     } catch (err) {
       if (err.response.status === 500) {
-          console.log(message)
         setMessage('There was a problem with the server');
       } else {
         setMessage(err.response.data.msg);
-        console.log(message)
 
       }
     }

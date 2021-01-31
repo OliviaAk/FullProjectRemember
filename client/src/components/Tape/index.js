@@ -17,7 +17,6 @@ export default function Tape() {
     const ref = useRef()
     const { users,userImg } = useSelector((state) => state.dashboardHero);
 
-console.log(userImg)
     useEffect(()=>{
         dispatch(userHero())
     },[])
@@ -47,8 +46,8 @@ console.log(userImg)
                                 <IconSVG className={styles.logo} src={Logo}/> 
                                 <div className={styles.itemContext}>    
                                                     
-                            <p>{u.firstName}</p>
-                            <p>{u.dateBirth}</p>
+                            <p className={styles.text}>{u.firstName}</p>
+                            <p className={styles.text}>{u.dateBirth}</p>
                             </div>
                             </div>
                             <Button onClick={()=>openModal(u)}  buttonSize='btn-nav'>Открыть</Button>

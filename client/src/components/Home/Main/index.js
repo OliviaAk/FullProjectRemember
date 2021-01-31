@@ -92,8 +92,9 @@ export default function Home({}) {
                             </div>
                         </div>
                     </div>
+                    <Tape/>
+
                 </div>
-                <Tape/>
           </div>
      </div>
     )

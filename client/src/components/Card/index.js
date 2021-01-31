@@ -26,7 +26,6 @@ export default function AddHero() {
 
     const handleClickForm = (data)=>{
       dispatch(createNewHero(data))
-      console.log(data)
       
 
     }
