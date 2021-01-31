@@ -52,7 +52,7 @@ export default function AddHero() {
                
                
                     <div className={styles.image}>    
-                    <Upload/>                   
+                 {/*  <Upload/>  */  }               
                 </div>
                  <div className={styles.text}>
                   <Input

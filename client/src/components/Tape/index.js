@@ -63,16 +63,7 @@ console.log(userImg)
             
         </div>
         <div className={styles.static}>Открыток на сайте {users.length}</div>
-        <div>{userImg.map((image)=>{
-            return(
-                <>
-           <img src={`http://localhost:5000/public/${image.profileImg}`} alt="hello image" height="200"/>
-
-                    <p>{image.profileImg}</p>
-                </>
-            )
-                    
-                })}</div>
+       
         </div>
     )
 }
