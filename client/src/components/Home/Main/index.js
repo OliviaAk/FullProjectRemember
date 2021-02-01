@@ -33,7 +33,6 @@ export default function Home({}) {
            {/* <Button className={styles.logoBtn} onClick={()=>setOpen(true)}
            buttonSize='btn--modal'>Авторизоваться</Button> */}
            </div>
-           <Modal show={open} closeModal={()=>setOpen(false)}/>
          <div className={styles.homeContainer}>          
                 <div className={styles.homeContent}>
                     <div className={styles.carousel}>

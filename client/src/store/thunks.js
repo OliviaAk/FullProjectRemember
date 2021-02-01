@@ -26,7 +26,7 @@ export const getHistoryByDate = createAsyncThunk("historyBy", async ({id}) => {
   return data;
 });
 export const createNewHero = createAsyncThunk('heroUser', async (hero)=>{
-  const {data} = await axios.post('http://localhost:5000/auth/heroAdd',hero)
+  const {data} = await axios.post('http://localhost:5000/add',hero)
   return data
 })
 

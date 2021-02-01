@@ -8,7 +8,7 @@ const {
 } = require("./controller");
 
 const route = express.Router();
-
+/*
 route.get(
 	"/facebook",
 	passport.authenticate("facebook", { scope: "email", session: false }),
@@ -20,7 +20,7 @@ route.get(
 		session: false,
 	}),
 	loginWithOauth,
-);
+); */
 route.post("/heroAdd", createHero);
 route.get("/heroAdd", getHeroes);
 route.get("/userHero", getHeroTape);

@@ -6,14 +6,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { createNewHero } from "../../store/thunks";
 import {useHistory} from 'react-router-dom'
 import Button from '../shared/Button'
+import Modal from '../shared/Modal'
+
 import Upload from '../shared/ImageContainer'
 
 
 export default function AddHero() {
   const dispatch = useDispatch();
   const history = useHistory()
-
-
+ const [open, setOpen ]= useState(false)
     const methods = useForm({ mode: "onBlur" });
 
     const {
@@ -26,14 +27,17 @@ export default function AddHero() {
 
     const handleClickForm = (data)=>{
       dispatch(createNewHero(data))
+      setOpen(!open)
+
+
+    }
+   
+    const closeModal = ( )=>{
+      setOpen(!open)
       
 
     }
-    useEffect(()=>{
-      if(isSubmitSuccessful){
-        history.push('/')
-      }
-    },[isSubmitSuccessful, history])
+    
     useEffect(()=>{
       if(isSubmitSuccessful){
         reset('firstName',' ');
@@ -45,9 +49,10 @@ export default function AddHero() {
         <FormProvider {...methods}>
         <div className={styles.dashboard}>
          <div className={styles.dashboardContainer}>
-                 
+         <Modal show={open} closeModal={()=>closeModal()}/>
+
            <div className={styles.dashboardContent}>
-              <form className={styles.addForm} onSubmit={handleSubmit(handleClickForm)}>
+              <form className={styles.addForm} >
                  <div className={styles.formContent}>
                
                

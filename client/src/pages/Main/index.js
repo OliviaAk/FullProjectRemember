@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <>
     <Layout>
-      <Home setOpen={()=>setOpen(!open)}/>
+      <Home />
     </Layout>
     </>
   );

@@ -3,7 +3,7 @@ const JWTstrategy = require("passport-jwt").Strategy;
 const FacebookStrategy = require("passport-facebook").Strategy;
 const ExtractJWT = require("passport-jwt").ExtractJwt;
 const User = require("../models/user.model");
-
+/*
 passport.use(
 	"jwt",
 	new JWTstrategy(
@@ -47,3 +47,4 @@ passport.use(
 		},
 	),
 );
+*/
