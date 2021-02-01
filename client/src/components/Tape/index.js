@@ -9,20 +9,12 @@ import Next from '../../assets/icons/chevron-right-solid.svg'
 import Prev from '../../assets/icons/chevron-left-solid.svg'
 import IconSVG from '../shared/Icons';
 import Logo from '../../assets/images/unnamed.png'
-
+import {users} from '../../mocks/tape'
 export default function Tape() {
     const [selectedItem, setSelectedItem]= useState({})
     const dispatch = useDispatch();
     const history= useHistory()
     const ref = useRef()
-    const { users,userImg } = useSelector((state) => state.dashboardHero);
-
-    useEffect(()=>{
-        dispatch(userHero())
-    },[])
-    useEffect(()=>{
-        dispatch(userHeroImg())
-    },[])
 
     const scroll = (scrollOffset) => {
         ref.current.scrollLeft += scrollOffset;
