@@ -22,7 +22,7 @@ const Modal = ({show, closeModal}) => {
         </button>
       </div>
       <div className={styles.modalContent}>
-        <p className={styles.modalText}>Ваша открытка создана успешно, после подтверждение, она появится на главной ленте! </p>
+        <p className={styles.modalText}>Ваша открытка создана успешно, после подтверждения, она появится на главной ленте! </p>
         <p>Спасибо!</p>
         </div>
     </div>
