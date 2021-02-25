@@ -3,7 +3,6 @@ import styles from "./styles.module.css";
 import  IconSVG  from '../Icons'
 import Close from '../../../assets/icons/close.svg'
 import {useHistory} from 'react-router-dom'
-
 import Vk from '../../../assets/icons/vk-brands.svg'
 import Google from '../../../assets/icons/google-brands.svg'
 import Facebook from '../../../assets/icons/facebook-brands.svg'
