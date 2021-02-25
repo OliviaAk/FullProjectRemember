@@ -6,8 +6,8 @@ const bodyParser = require("body-parser");
 const router = require("./src/routes");
 const app = express();
 const path = require('path')
-const { PORT } = process.env;
-const url = process.env.DATABASE;
+const  PORT  = 5001;
+const url = 'mongodb+srv://dbOl:1234@clustermemory.wksik.mongodb.net/dbOl';
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
