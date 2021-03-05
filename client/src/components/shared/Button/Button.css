@@ -17,6 +17,10 @@
     border: 1px solid transparent;
     transition: all 0.3s ease 0s;
     outline: none;
+    height: 60px;
+    align-self: center;
+    width: 200px;
+    margin: 5px;
   }
   .primary-btn2{
     cursor: pointer;

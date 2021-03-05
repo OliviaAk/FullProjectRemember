@@ -1,5 +1,6 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import { Link , useHistory} from "react-router-dom";
+import {useDispatch, useSelector} from 'react-redux'
 import IconSVG from '../../shared/Icons';
 import MyCarousel from '../../shared/Slider';
 import LogoType from '../../../assets/images/logotype.jpg';
@@ -16,11 +17,12 @@ import End from '../../../assets/images/star.png'
 import Modal from '../../shared/Modal'
 import Tape from '../../Tape';
 
+
 export default function Home({}) {
     const history = useHistory()
-    const [open,setOpen]=useState(false)
+    const [open,setOpen]=useState(false);
 
-
+ 
     const openUrl = ()=>{
         window.open('https://uploads.knightlab.com/storymapjs/0b00d1b239e2b26a3f630058f4bf7d5c/test/draft.html',"_self")
     }

@@ -8,6 +8,7 @@ const heroUserSchema = new Schema({
 	profileImg: {
 		type: String,
 	},
+	isShow: {type:Boolean},
 });
 
 const HeroUser = mongoose.model("HeroUser", heroUserSchema);

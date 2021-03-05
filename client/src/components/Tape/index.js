@@ -1,6 +1,6 @@
 import React,{useState, useEffect, useRef} from 'react'
 import Button from '../shared/Button';
-import { userHero, userHeroImg } from "../../store/thunks";
+import {userHero } from "../../store/thunks";
 import { showCurrentHero } from "../../store/actions";
 import styles from './styles.module.css';
 import {useHistory} from 'react-router-dom'
@@ -9,13 +9,25 @@ import Next from '../../assets/icons/chevron-right-solid.svg'
 import Prev from '../../assets/icons/chevron-left-solid.svg'
 import IconSVG from '../shared/Icons';
 import Logo from '../../assets/images/unnamed.png'
-import {users} from '../../mocks/tape'
+
 export default function Tape() {
-    const [selectedItem, setSelectedItem]= useState({})
+    const [selectedItem, setSelectedItem]= useState([]);
+    const { usersHeroes } = useSelector((state) => state.dashboardHero);
+
     const dispatch = useDispatch();
     const history= useHistory()
     const ref = useRef()
+    useEffect(()=>{
+        dispatch(userHero())
+       },[])
 
+ useEffect(()=>{
+     if(usersHeroes.length>0){
+         const newMass = usersHeroes.filter((i)=>i.isShow===true)
+         setSelectedItem(newMass)
+     }
+ },[usersHeroes])
+ 
     const scroll = (scrollOffset) => {
         ref.current.scrollLeft += scrollOffset;
       };
@@ -30,7 +42,7 @@ export default function Tape() {
         <div className={styles.tape}>
                 <IconSVG src={Prev} handleClickIcon={()=>scroll(-100)} className={styles.btnIcon}/>
             <div className={styles.dashboard} ref={ref}>
-                {users.map((u)=>{
+                {selectedItem.map((u)=>{
                     return(
                         <>
                         <div className={styles.dashboardItem}>
@@ -53,7 +65,7 @@ export default function Tape() {
 
             
         </div>
-        <div className={styles.static}>Открыток на сайте {users.length}</div>
+        <div className={styles.static}>Открыток на сайте {selectedItem.length}</div>
        
        
         </div>

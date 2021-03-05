@@ -1,21 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const getHeroes = createAsyncThunk("heroes", async () => {
-  const { data } = await axios.get(`http://localhost:5001/api/auth/api/heroAdd`);
-  return data;
-});
-
 
 export const getHero = createAsyncThunk("hero", async ({id}) => {
   const { data } = await axios.get(`http://localhost:5001/api/heroes/hero/?id=${id}`);
   return data;
 });
 
-export const getHeroByName = createAsyncThunk("hero", async ({name}) => {
-  const { data } = await axios.get(`http://localhost:5001/api/heroes/search?lastName=${name}`);
-  return data;
-});
 
 export const getHistory = createAsyncThunk("history", async () => {
   const { data } = await axios.get(`http://localhost:5001/api/history`);
@@ -26,16 +17,21 @@ export const getHistoryByDate = createAsyncThunk("historyBy", async ({id}) => {
   return data;
 });
 export const createNewHero = createAsyncThunk('heroUser', async (hero)=>{
-  const {data} = await axios.post('http://localhost:5001/api/add',hero)
+  const {data} = await axios.post('http://localhost:5000/add',hero)
   return data
 })
 
+export const userHero = createAsyncThunk('heroUserGet',async()=>{
+  const {data}= await axios.get(`http://localhost:5000/add`)
+  return data
+})
 
-export const userHero = createAsyncThunk('uh',async()=>{
-  const {data}= await axios.get(`http://localhost:5001/api/auth/userHero`)
-  return data
-})
-export const userHeroImg = createAsyncThunk('lol',async()=>{
-  const {data}= await axios.get(` http://localhost:5001/api/img/`)
-  return data
-})
+export const setPublishCards = createAsyncThunk("publish", async ({ id, isShow }) => {
+  const { data } = await axios.patch(`http://localhost:5000/add/${id}`, { isShow });
+  return data;
+});
+
+export const deleteCard = createAsyncThunk("delete", async ( {id} ) => {
+  const { data } = await axios.delete(`http://localhost:5000/add/${id}`);
+  return data;
+});

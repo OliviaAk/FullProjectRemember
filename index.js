@@ -5,18 +5,12 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const router = require("./src/routes");
 const app = express();
-const path = require('path')
-const  PORT  = 5001;
+const  PORT  = 5000;
 const url = 'mongodb+srv://dbOl:1234@clustermemory.wksik.mongodb.net/dbOl';
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
-app.use('/api/',router);
-app.use(express.static('./client/build/'));
-app.get('/*', (req, res) => {
-	res.sendFile('index.html', { root: __dirname + '/client/build/' });
-  });
-
+app.use(router);
 mongoose
 	.connect(url, {
 		useNewUrlParser: true,

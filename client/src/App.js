@@ -7,6 +7,7 @@ import DashboardPage from './pages/Dashboard'
 import HeroPage from './pages/Hero'
 import CardPage from './pages/Card'
 import CardPresent from './components/ModalCard/'
+import AdminPage from "./pages/Admin";
 function App() {
   return (
     <Router>
@@ -16,10 +17,7 @@ function App() {
         <Route path='/person' component={HeroPage}/>
         <Route path='/add' component={CardPage}/>
         <Route path='/userCard' component={CardPresent}/>
-
-
-
-
+        <Route path='/admin' component={AdminPage}/>
       </Switch>
     </Router>
   );
