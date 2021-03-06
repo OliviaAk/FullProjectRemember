@@ -1,18 +1,5 @@
-const fs = require("fs");
-const path = require("path");
-const multer = require("multer");
+
 const Hero = require("../../models/hero.model");
-
-const storage = multer.diskStorage({
-	destination: (req, file, cb) => {
-		cb(null, "uploads");
-	},
-	filename: (req, file, cb) => {
-		cb(null, `${file.fieldname}-${Date.now()}`);
-	},
-});
-
-const upload = multer({ storage });
 
 const getHero = async (req, res) => {
 	try {
@@ -47,21 +34,6 @@ const getHeroes = async (req, res) => {
 	}
 };
 
-const updateEvent = async (req, res) => {
-	const { id } = req.params;
-	const { isFavorite } = req.body;
-	try {
-		const updatedEvent = await Event.updateOne(
-			{ eventId: id },
-			{ $set: { isFavorite } },
-		);
-		if (updatedEvent.ok) {
-			res.status(200).json({ eventId: id, isFavorite });
-		}
-	} catch (err) {
-		res.status(500).json({ message: err });
-	}
-};
 
 const createHero = async (req, res) => {
 	try {
@@ -95,6 +67,5 @@ module.exports = {
 	getHeroes,
 	createHero,
 	getHero,
-	updateEvent,
 	getHeroByName,
 };
